@@ -1,18 +1,22 @@
 <mvc:View controllerName="app.controller.Navigation"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
     <Page id="page" title="{i18n>title}">
         <content>
             <VBox id="OverviewBox"> 
-                <Label id="idInput1Label" text="{i18n>Value1}" labelFor="idInput1"/> 
+                <!--<Label id="idInput1Label" text="{i18n>Value1}" labelFor="idInput1"/> 
                 <Input id="idInput1" width="20%" required="true" placeholder="{i18n>InputPlaceholder}" valueStateText="{i18n>ValueStateText}" change="onInputChange"/> 
                 <Label id="idInput2Label" text="{i18n>Value2}" labelFor="idInput1"/> 
                 <Input id="idInput2" width="20%" required="true" placeholder="{i18n>InputPlaceholder}" valueStateText="{i18n>ValueStateText}" change="onInputChange"/> 
+                -->
+                <core:Fragment id="idNavInputs" fragmentName="app.fragment.Inputs" type="XML"/>
             </VBox>
         </content> 
         <footer> 
             <Toolbar id="idOverviewPageToolbar"> 
                 <ToolbarSpacer id="idOverviewPageToolbarSpacer"/> 
+                <Button id="idOpenDialogButton" icon="sap-icon://popup-window" tooltip="{i18n>dialogTooltip}" press="onOpenDialog"/> 
                 <Button id="idButton" icon="sap-icon://arrow-right" tooltip="{i18n>tooltip}" press="onPress"/> 
             </Toolbar> 
         </footer> 

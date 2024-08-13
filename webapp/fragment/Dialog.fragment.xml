@@ -1,0 +1,22 @@
+<core:FragmentDefinition
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    displayBlock="true"
+    id="idDialogFragment">
+    <Dialog id="idDialog" title="{i18n>calc}">
+        <content>
+            <VBox id="idDialogVBox" >
+                <Label id="idInput3Label" text="{i18n>Value2}" labelFor="idInput1"/> 
+                <Input id="idInput3" value="{ViewModel>/Value3}" editable="false" width="20%" required="false" placeholder="{i18n>InputPlaceholder}" valueStateText="{i18n>ValueStateText}"/>         
+            </VBox>
+        </content>
+        <footer>
+            <Toolbar id="idDialogToolbar">
+                <ToolbarSpacer id="idDialogToolbarSpacer"/>
+                <Button id="idPlus" icon="sap-icon://add" press="onPressGetSum"/>
+                <Button id="idClose" text="{i18n>close}" press="onClose"/>
+            </Toolbar>
+        </footer>
+    </Dialog>
+</core:FragmentDefinition>
